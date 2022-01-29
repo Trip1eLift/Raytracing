@@ -1,0 +1,126 @@
+# author: Kyle
+
+Background {
+	# Color of the background 
+	color 0 0 0 
+	# low intensity white light
+	ambientLight 0.2 0.2 0.2 
+}
+
+Camera {
+	eye 0 10 0
+	lookAt 0 0 0
+	up 0 0 1
+	fovy 70
+}
+Lights {
+    	Light {
+		position 0 -1 0
+		color 1 1 1
+	}
+}
+
+Materials {
+	Material {
+		textureFilename NULL
+		diffuseColor 0.1 0.1 0.1
+		specularColor 0.1 0.1 0.1
+		reflectiveColor 1 1 1
+		shininess 100
+		transparentColor 0.0 0.0 0.0
+		indexOfRefraction 1.0
+	}
+	Material {
+		textureFilename ../Project_3/Media/textures/kaleidoscope.jpg
+		diffuseColor 0.0 0.0 0.0
+		specularColor 0.0 0.0 0.0
+		reflectiveColor 0 0 0
+		shininess 50
+		transparentColor 1 1 1 
+		indexOfRefraction 1.0
+	}
+    Material {
+		textureFilename NULL
+		diffuseColor 1 1 1
+		specularColor 0.3 0.3 0.3
+		reflectiveColor 0.3 0.3 0.3
+		shininess 50
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+}
+
+Group {
+	Triangle {
+		vertex0 0 -4 80
+		vertex1 69.28 -4 -40
+		vertex2 -69.28 -4 -40
+		tex_xy_0 0.5 0
+		tex_xy_1 0.067 0.75
+		tex_xy_2 0.933 0.75
+		materialIndex 2
+	}
+	Triangle {
+		vertex0 0 0 4
+		vertex1 3.464 0 -2
+		vertex2 -3.464 0 -2
+		tex_xy_0 0.5 0
+		tex_xy_1 0.067 0.75
+		tex_xy_2 0.933 0.75
+		materialIndex 1
+	}
+	Triangle {
+		vertex0 0 0 4
+		vertex1 0 10 4
+		vertex2 3.464 10 -2
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 0 0 4
+		vertex1 3.464 10 -2
+		vertex2 3.464 0 -2
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+    Triangle {
+		vertex0 0 0 4
+		vertex1 -3.464 0 -2
+		vertex2 -3.464 10 -2
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+    Triangle {
+		vertex0 0 0 4
+		vertex1 -3.464 10 -2
+		vertex2 0 10 4
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+    Triangle {
+		vertex0 3.464 0 -2
+		vertex1 3.464 10 -2
+		vertex2 -3.464 0 -2
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+    Triangle {
+		vertex0 -3.464 0 -2
+		vertex1 3.464 10 -2
+		vertex2 -3.464 10 -2
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+}

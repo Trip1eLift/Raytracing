@@ -1,0 +1,152 @@
+Background {
+	# Color of the background 
+	color 0.2 0.2 0.2 
+	# low intensity white light
+	ambientLight 0.2 0.2 0.2 
+}
+
+Camera {
+	eye 8 15 6
+	lookAt 8 0 0
+	up 0 0 1
+	fovy 40
+}
+Lights {
+    	Light {
+		position 14 0 4
+		color 0.5 0.5 0.5
+	}
+    Light {
+		position 5 0 4
+		color 0.3 0.3 0.3
+	}
+    Light {
+		position 14 10 4
+		color 0.2 0.2 0.2
+	}
+    Light {
+		position -10 20 4
+		color 0.3 0.3 0.3
+	}
+}
+
+Materials {
+	Material {
+		textureFilename NULL
+		diffuseColor 0.8 0.8 0.8
+		specularColor 0.1 0.1 0.1
+		reflectiveColor 0 0 0
+		shininess 5
+		transparentColor 0.0 0.0 0.0
+		indexOfRefraction 1.0
+	}
+	Material {
+		textureFilename NULL
+		diffuseColor 0.8 0.8 0.6
+		specularColor 1.0 1.0 1.0
+		reflectiveColor 0.9 0.9 0.9
+		shininess 50
+		transparentColor 0.1 0.1 0.1 
+		indexOfRefraction 1.0
+	}
+    Material {
+		textureFilename NULL
+		diffuseColor 0.3 0.3 0.3
+		specularColor 0.6 0.6 0.6
+		reflectiveColor 0.7 0.7 0.7
+		shininess 300
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+    Material {
+		textureFilename NULL
+		diffuseColor 1 1 1
+		specularColor 0 0 0
+		reflectiveColor 0 0 0
+		shininess 1
+		transparentColor 0.0 0.0 0.0
+		indexOfRefraction 1.0
+	}
+}
+
+Group {
+	Triangle {
+		vertex0 -1010 -990 0
+		vertex1 1000 -1000 0
+		vertex2 990 1010 0
+		tex_xy_0 0 0
+		tex_xy_1 1 0
+		tex_xy_2 1 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 -1000 -1000 00
+		vertex1 1000 1000 00
+		vertex2 -1000 1000 00
+		tex_xy_0 0 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+    Triangle {
+		vertex0 -1010 -990 30
+		vertex1 990 1010 30
+		vertex2 1000 -1000 30
+		tex_xy_0 0 0
+		tex_xy_1 1 0
+		tex_xy_2 1 1
+		materialIndex 3
+	}
+	Triangle {
+		vertex0 -1000 -1000 30
+		vertex1 -1000 1000 30
+		vertex2 1000 1000 30
+		tex_xy_0 0 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 3
+	}
+    Triangle {
+		vertex0 0 0 4
+		vertex1 16 0 4
+		vertex2 16 0 0
+		tex_xy_0 0 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 1
+	}
+    Triangle {
+		vertex0 0 0 4
+		vertex1 16 0 0
+		vertex2 0 0 0
+		tex_xy_0 0 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 1
+	}
+    Sphere {
+		materialIndex 2
+		center 2 2 1
+		radius 1
+	}
+    Sphere {
+		materialIndex 2
+		center 5 2 1
+		radius 1
+	}
+    Sphere {
+		materialIndex 2
+		center 8 2 1
+		radius 1
+	}
+    Sphere {
+		materialIndex 2
+		center 11 2 1
+		radius 1
+	}
+    Sphere {
+		materialIndex 2
+		center 14 2 1
+		radius 1
+	}
+}

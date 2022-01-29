@@ -1,0 +1,165 @@
+Background {
+	# Color of the background 
+	color 0 0 0 
+	# low intensity white light
+	ambientLight 0.2 0.2 0.2 
+}
+
+Camera {
+	eye 8 20 6
+	lookAt 8 0 0
+	up 0 0 1
+	fovy 40
+}
+Lights {
+    	Light {
+		position 14 0 4
+		color 0.85 0.85 0.85
+	}
+	Light {
+		position 0 0 4
+		color 0.85 0.85 0.85
+	}
+	Light {
+		position 50 20 4
+		color 0.2 0.2 0.2
+	}
+    Light {
+		position 5 0 4
+		color 0.3 0.3 0.3
+	}
+    Light {
+		position 14 10 4
+		color 0.3 0.3 0.3
+	}
+}
+
+Materials {
+	Material {
+		textureFilename NULL
+		diffuseColor 0.8 0.8 0.8
+		specularColor 0.1 0.1 0.1
+		reflectiveColor 0 0 0
+		shininess 5
+		transparentColor 0.0 0.0 0.0
+		indexOfRefraction 1.0
+	}
+	Material {
+		textureFilename NULL
+		diffuseColor 0.769 0.792 0.808
+		specularColor 1.0 1.0 1.0
+		reflectiveColor 0.9 0.9 0.9
+		shininess 50
+		transparentColor 0.1 0.1 0.1 
+		indexOfRefraction 1.0
+	}
+    Material {
+		textureFilename ../Project_3/Media/textures/blue_stone.jpg
+		diffuseColor 1 1 1
+		specularColor 0.9 0.9 0.9
+		reflectiveColor 0.9 0.9 0.9
+		shininess 500
+		transparentColor 0 0 0 
+		indexOfRefraction 0.9
+	}
+    Material {
+		textureFilename ../Project_3/Media/textures/white_stone.jpg
+		diffuseColor 0.1 0.1 0.1
+		specularColor 0.3 0.3 0.3
+		reflectiveColor 0.2 0.2 0.2
+		shininess 300
+		transparentColor 1 1 1 
+		indexOfRefraction 0.9
+	}
+    Material {
+		textureFilename ../Project_3/Media/textures/lava.png
+		diffuseColor 1 1 1
+		specularColor 0.3 0.3 0.3
+		reflectiveColor 0.3 0.3 0.3
+		shininess 30
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+    Material {
+		textureFilename ../Project_3/Media/textures/white_stone.jpg
+		diffuseColor 0.1 0.1 0.1
+		specularColor 0.3 0.3 0.3
+		reflectiveColor 0.2 0.2 0.2
+		shininess 300
+		transparentColor 1 1 1 
+		indexOfRefraction 0.75
+	}
+    Material {
+		textureFilename NULL
+		diffuseColor 0.1 0.1 0.1
+		specularColor 0.3 0.3 0.3
+		reflectiveColor 0.2 0.2 0.2
+		shininess 300
+		transparentColor 0.7 0.7 0.5 
+		indexOfRefraction 0.9
+	}
+}
+
+Group {
+	Triangle {
+		vertex0 -1010 -990 0
+		vertex1 1000 -1000 0
+		vertex2 990 1010 0
+		tex_xy_0 0 0
+		tex_xy_1 1 0
+		tex_xy_2 1 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 -1000 -1000 0
+		vertex1 1000 1000 0
+		vertex2 -1000 1000 0
+		tex_xy_0 0 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+    Triangle {
+		vertex0 0 0 4
+		vertex1 16 0 4
+		vertex2 16 0 0
+		tex_xy_0 0 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 1
+	}
+    Triangle {
+		vertex0 0 0 4
+		vertex1 16 0 0
+		vertex2 0 0 0
+		tex_xy_0 0 0
+		tex_xy_1 1 1
+		tex_xy_2 0 1
+		materialIndex 1
+	}
+    Sphere {
+		materialIndex 5
+		center 7.5 10 1
+		radius 1
+	}
+    Sphere {
+		materialIndex 3
+		center 7 8 1
+		radius 1
+	}
+    Sphere {
+		materialIndex 4
+		center 8 6 1
+		radius 1
+	}
+    Sphere {
+		materialIndex 6
+		center 9.7 4 1
+		radius 1
+	}
+    Sphere {
+		materialIndex 2
+		center 11.4 2 1
+		radius 1
+	}
+}
